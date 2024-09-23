@@ -7,17 +7,49 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="f1(6)">
     <h2 id="h2"></h2>
-    <button
+    <!-- <button
         style="width: 150px; height: 50px; background-color: blue; border-radius: 1rem; color: white; font-size: xx-large; font-weight: 600;"
         onclick="f1()">
-        click</button>
+
+    click</button> -->
     <h1 id="ptr"></h1>
 </body>
 <script>
     // document.getElementById("h2").innerHTML = "click below to sort the array";
-    function f1() {
+
+
+
+
+    function f1(n) {
+
+        //code for nth term;
+        // if (n == 0 || n == 1) return n;
+        // return f1(n - 1) + f1(n - 2);
+
+        //code for n term
+        var firstterm = 0;
+        var secondterm = 1;
+
+        document.write("first term" + firstterm + "<br/>");
+        document.write("second term" + secondterm + "<br/>");
+        document.write("next term" + "<br/>");
+        for (let i = 3; i <= n; i++) {
+            var nextterm = firstterm + secondterm;
+            firstterm = secondterm;
+            secondterm = nextterm;
+            document.write(nextterm + ",");
+        }
+
+
+
+
+
+
+
+
+
         // 1) destructuring
         // const person = {
         //     name: "vijay raj",
@@ -135,28 +167,44 @@
         // console.log(x + array);
         // document.write(array)
         // code for removing dublicates and find missing number b/w 1 to 9
-        const a1 = [1, 5, 2, 5, 5, 7, 8, 8, 9, 9, 9, 9, 9, 9, 3, 5, 5, 7, 9, 9, 9];
-        var a2 = [a1[0]];
-        var k = 1;
-        for (let i = 1; i < a1.length; i++) {
-            for (let j = 0; j < a2.length; j++) {
-                if (a1[i] == a2[j]) {
-                    break;
-                }
-                if (j == a2.length - 1) {
-                    a2[k] = a1[i];
-                    k++;
-                }
-            }
-        }
-        document.write("Number in a array not repeated")
-        document.write(a2 + "<br/>")
-        document.write("missing number" + "<br/>")
-        for (let index = 1; index <= a2.length; index++) {
-            if (a2.includes(index) == false) {
-                document.write(index + " ")
-            }
-        }
+        // const a1 = [1, 5, 2, 5, 5, 7, 8, 8, 9, 9, 9, 9, 9, 9, 3, 5, 5, 7, 9, 9, 9];
+        // var a2 = [a1[0]];
+        // var k = 1;
+        // for (let i = 1; i < a1.length; i++) {
+        //     for (let j = 0; j < a2.length; j++) {
+        //         if (a1[i] == a2[j]) {
+        //             break;
+        //         }
+        //         if (j == a2.length - 1) {
+        //             a2[k] = a1[i];
+        //             k++;
+        //         }
+        //     }
+        // }
+        // document.write("Number in a array not repeated")
+        // document.write(a2 + "<br/>")
+        // document.write("missing number" + "<br/>")
+        // for (let index = 1; index <= a2.length; index++) {
+        //     if (a2.includes(index) == false) {
+        //         document.write(index + " ")
+        //     }
+        // }
+        // var a = null;
+        // var arr2 = [];
+        // const arr = [7814, 2319, 4721, 9127, 4132];
+        // for (let index = 0; index < arr.length; index++) {
+        //     var x = "";
+        //     var y = arr[index];
+        //     while (y > 0) {
+        //         var j = y % 10;
+        //         y = parseInt(y / 10);
+        //         x = x + j;
+        //     }
+        //     arr2[index] = x;
+        // }
+        // document.write(arr2);
+
+
     }
 </script>
 
