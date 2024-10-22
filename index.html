@@ -7,40 +7,49 @@
     <title>Document</title>
 </head>
 
-<body onload="f1(6)">
+<body onload="f1()">
     <h2 id="h2"></h2>
     <!-- <button
         style="width: 150px; height: 50px; background-color: blue; border-radius: 1rem; color: white; font-size: xx-large; font-weight: 600;"
         onclick="f1()">
-
-    click</button> -->
+        click</button> -->
     <h1 id="ptr"></h1>
 </body>
 <script>
-    // document.getElementById("h2").innerHTML = "click below to sort the array";
 
 
 
+    // document.write(f1(1))
+    function f1() {
+        // return function f2(b) {
 
-    function f1(n) {
+        //     return function f3(c) {
+        //         console.log(a + b + c);
 
-        //code for nth term;
+        //     }
+        // }
+
+        // let a;
+        // console.log(a);
+
+
+        // // code for nth term;
         // if (n == 0 || n == 1) return n;
         // return f1(n - 1) + f1(n - 2);
 
         //code for n term
-        var firstterm = 0;
-        var secondterm = 1;
+        // var firstterm = 0;
+        // var secondterm = 1;
 
-        document.write("first term" + firstterm + "<br/>");
-        document.write("second term" + secondterm + "<br/>");
-        document.write("next term" + "<br/>");
-        for (let i = 3; i <= n; i++) {
-            var nextterm = firstterm + secondterm;
-            firstterm = secondterm;
-            secondterm = nextterm;
-            document.write(nextterm + ",");
-        }
+        // document.write("first term" + firstterm + "<br/>");
+        // document.write("second term" + secondterm + "<br/>");
+        // document.write("next term" + "<br/>");
+        // for (let i = 3; i <= n; i++) {
+        //     var nextterm = firstterm + secondterm;
+        //     firstterm = secondterm;
+        //     secondterm = nextterm;
+        //     document.write(nextterm + ",");
+        // }
 
 
 
@@ -51,19 +60,13 @@
 
 
         // 1) destructuring
-        // const person = {
-        //     name: "vijay raj",
-        //     age: 25,
-        //     gender: "male",
-        //     hobbies: ["coding", "cooking"]
-        // }
-        // const { name, age, ...rest } = person;
+
         // console.log(name + "" + "" + age + " " + rest);
         // 2)  find largest number
         // const arr = [2, 3, 4, 5, 6, 7, 8, 60, 700, 23, 65, 78, 900];
         // var ptr1 = arr[0];
         // for (let i = 0; i < arr.length; i++) {
-        //     if (ptr1 < arr[i+1]) {
+        //     if (ptr1 < arr[i + 1]) {
         //         ptr1 = arr[i];
         //     }
         // }
@@ -86,7 +89,6 @@
         // for (let i = 0; i < arr.length - 1; i++) {
         //     for (let j = i + 1; j < arr.length; j++) {
         //         var temp = arr[i];
-
         //         if (arr[i] > arr[j]) {
         //             arr[i] = arr[j];
         //             arr[j] = temp;
@@ -128,45 +130,32 @@
         //     }
         // }
         // document.getElementById("ptr").innerHTML = mergedlist;
-
-
-        // 5)wirte the code in js  to  reverse given string
+        // // 5)wirte the code in js  to  reverse given string
         // const str = "hello I am vijay raj";
         // var str1 = "";
         // for (let i = str.length - 1; i >= 0; i--) {
         //     str1 = str1 + str[i]
         // }
         // document.write("<h1>original str</h1>" + `<h2>${str}</h2>`);
-
         // const str2 = str1.split(" ").reverse();
-
         // document.write("<h1>reversed string</h1>" + `<h2>${str2}</h2>`);
         //bubble sort
         // var x = 0
-        // var flag = 0;
+        // // var flag = 0;
         // const array = [2, 3, 1, 4, 5]
         // for (let i = 0; i < array.length - 1; i++) {
         //     x++;
         //     for (let j = 0; j < array.length - i - 1; j++) {
-
         //         if (array[j] > array[j + 1]) {
         //             var temp = array[j];
         //             array[j] = array[j + 1];
         //             array[j + 1] = temp;
         //         }
-        //         if (flag == 0) {
-        //             break;
-        //         }
-        //         else {
-        //             flag == 0;
-        //         }
         //     }
-
-
         // }
-        // console.log(x + array);
         // document.write(array)
-        // code for removing dublicates and find missing number b/w 1 to 9
+
+        // code for removing dublicates and find missing number b/w 1 to 9;
         // const a1 = [1, 5, 2, 5, 5, 7, 8, 8, 9, 9, 9, 9, 9, 9, 3, 5, 5, 7, 9, 9, 9];
         // var a2 = [a1[0]];
         // var k = 1;
@@ -200,12 +189,88 @@
         //         y = parseInt(y / 10);
         //         x = x + j;
         //     }
-        //     arr2[index] = x;
+
+
+        //     var v = x.split('').sort();
+        //     arr2[index] = v.join("");
+
         // }
         // document.write(arr2);
 
-
+        // var dicesum = 0;
+        // var count = 0;
+        // while (dicesum < 100) {
+        //     var no = 0;
+        //     count++;
+        //     no = Math.floor(Math.random() * 7);
+        //     if (dicesum + no <= 100) {
+        //         dicesum = dicesum + no;
+        //     }
+        //     else {
+        //         alert(dicesum + "  throw again to win");
+        //     }
+        // }
+        // document.getElementsByTagName('h2')[0].innerHTML = "the output is become " + dicesum + " on " + count + " throw of dice";
     }
+    // f1(1)(2)(3);
+    // find the largest lenght  word;
+    // let s = "I am a software developer";
+    // s = s.split(" ");
+    // var index = 1;
+    // for (index; index < s.length; index++) {
+    //     var x = s[0].length;
+    //     if (x < s[index].length) {
+    //         x = s[index].length;
+    //     }
+    // }
+    // console.log(s[index - 1]);
+
+
+
+    // second largest elements
+    // let array = [10, 5, 20, 40, 40, 30];
+    // let first = -Infinity, second = -Infinity;
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i] > first) {
+    //         second = first;
+    //         first = array[i];
+    //     }
+    //     else if (first > second && first != array[i]) {
+    //         second = array[i];
+    //     }
+
+    // }
+    // console.log(second);
+    // second minmum  element
+
+    // let array = [10, 5, 20, 40, 40, 30];
+    // let first = Infinity, second = Infinity;
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i] < first) {
+    //         second = first;
+    //         first = array[i];
+    //     }
+    //     else if (array[i] < second && first != array[i]) {
+    //         second = array[i];
+    //     }
+    // }
+    // console.log(second);
+
+    // insert element in array at any index
+
+    // (() => {
+    //     let array = [2, 4, 6, 7, 8, 12, 51, 5];
+    //     let lb = 0;
+    //     let ub = 7;
+    //     let index = 5;
+    //     let element = 100;
+    //     for (let i = ub; i >= index; i--) {     //here index at which the element is inserted
+    //         array[i + 1] = array[i];
+    //     }
+    //     array[index] = element;
+    //     console.log(array);
+    // })()
+
 </script>
 
 </html>
