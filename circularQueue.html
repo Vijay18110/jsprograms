@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quee</title>
+</head>
+<body>
+
+</body>
+<script>
+ // quee is only concetp that we can implement using array;
+ let front=-1;
+ let rear=-1;
+ let maxlength=6;
+ const queue=[maxlength];
+const enquee=(element)=>{
+    if(((rear+1)%maxlength)===front){
+         console.log("queue is full");
+    }
+    else{
+        if(front===-1){
+            front=0;
+        }
+        rear=(rear+1)%maxlength;
+        queue[rear]=element;
+    }
+}
+const dequee=()=>{
+    if(front===-1){
+        console.log("queue is empty");
+    }
+    else{
+        console.log(queue[front])
+        queue[front]=null;
+        if(rear===front){
+            console.log("queue become empty after this operation");
+            front=-1;
+            rear=-1;
+        }
+        else{
+            front=(front+1)%maxlength;
+        }
+    }
+}
+enquee(10);
+enquee(20);
+enquee(30);
+enquee(50);
+enquee(29)
+enquee(201)
+dequee();
+dequee();
+dequee();
+dequee();
+dequee()
+dequee()
+enquee(100)
+enquee(200)
+dequee()
+console.log(queue)
+console.log(front,rear)
+
+</script>
+</html>

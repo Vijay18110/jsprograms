@@ -258,18 +258,18 @@
 
     // insert element in array at any index
 
-    // (() => {
-    //     let array = [2, 4, 6, 7, 8, 12, 51, 5];
-    //     let lb = 0;
-    //     let ub = 7;
-    //     let index = 5;
-    //     let element = 100;
-    //     for (let i = ub; i >= index; i--) {     //here index at which the element is inserted
-    //         array[i + 1] = array[i];
-    //     }
-    //     array[index] = element;
-    //     console.log(array);
-    // })()
+    (() => {
+        let array = [2, 4, 6, 7, 8, 12, 51, 5];
+        let lb = 0;
+        let ub = 7;
+        let index = 5;
+        let element = 100;
+        for (let i = ub; i >= index; i--) {     //here index at which the element is inserted
+            array[i + 1] = array[i];
+        }
+        array[index] = element;
+        console.log(array);
+    })()
 
 </script>
 

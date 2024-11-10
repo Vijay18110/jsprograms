@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="display: flex;  justify-content: center;">open console to see to result</h1>
+</body>
+<script>
+    let size=5;
+    let stack=[size];
+    var topp=-1;
+const push=(Element)=>{
+    if(topp===size){
+        console.log("stack is full");
+    }
+    else{
+        topp=topp+1;
+        stack[topp]=Element;
+
+    }
+}
+const pop=()=>{
+    if (topp==-1) {
+        console.log("stack is empty")
+    }
+    else{
+console.log(stack[topp])
+stack[topp]=null;
+topp--;
+    }
+}
+push(30);
+push(40);
+push(50);
+push(60);
+push(70);
+push(80);
+pop();
+pop();
+pop();
+pop();
+pop();
+pop();
+pop();
+push(10)
+console.log(stack)
+console.log(topp)
+
+</script>
+
+</html>
